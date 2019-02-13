@@ -21,17 +21,13 @@
     <!-- <h1>Site name</h1> -->
     <div id="react-container"></div>
     <script type="text/babel">
-        class Hello extends React.Component {
-            render(){
-                return (
-                    <div id="fancy">
-                        <h1 className="heading"> Hello World from component</h1>
-                    </div>
+        const Banner = () => (
+                <div id="fancy">
+                    <h1 className="heading"> Hey React!!! </h1>
+                </div>
                 )
-            }
-        }
         ReactDOM.render(
-            <Hello/>,
+            <Banner />,
             document.getElementById('react-container')
         )
     </script>
