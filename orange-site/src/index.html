@@ -21,18 +21,9 @@
     <!-- <h1>Site name</h1> -->
     <div id="react-container"></div>
     <script type="text/babel">
-        class Hello extends React.Component {
-            render() {
-                return(
-                    <div>
-                        <h1> Hello {this.props.name}</h1>
-                        <p> Learning React version {this.props.version}</p>
-                    </div>
-                )
-            }
-        }
+        const HelloStateless = ({name}) => (<h1>Hello {name} </h1>)
         ReactDOM.render(
-            <Hello name="Friend!!" version={16} />,
+            <HelloStateless name="Friend!!" version={16} />,
             document.getElementById('react-container')
         )
     </script>
