@@ -21,13 +21,18 @@
     <!-- <h1>Site name</h1> -->
     <div id="react-container"></div>
     <script type="text/babel">
-        const Banner = () => (
-                <div id="fancy">
-                    <h1 className="heading"> Hey React!!! </h1>
-                </div>
+        class Hello extends React.Component {
+            render() {
+                return(
+                    <div>
+                        <h1> Hello {this.props.name}</h1>
+                        <p> Learning React version {this.props.version}</p>
+                    </div>
                 )
+            }
+        }
         ReactDOM.render(
-            <Banner />,
+            <Hello name="Friend!!" version={16} />,
             document.getElementById('react-container')
         )
     </script>
