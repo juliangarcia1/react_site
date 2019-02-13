@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Getting started with React</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #fancy {
+            background-color: gray;
+        }
+        .heading {
+            color: white;
+        }
+    </style>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -13,8 +21,17 @@
     <!-- <h1>Site name</h1> -->
     <div id="react-container"></div>
     <script type="text/babel">
+        class Hello extends React.Component {
+            render(){
+                return (
+                    <div id="fancy">
+                        <h1 className="heading"> Hello World from component</h1>
+                    </div>
+                )
+            }
+        }
         ReactDOM.render(
-            <h1>Hello World!</h1>,
+            <Hello/>,
             document.getElementById('react-container')
         )
     </script>
